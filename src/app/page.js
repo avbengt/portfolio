@@ -46,7 +46,7 @@ export default function Home() {
 					<div className="inner">
 						<h2 className="font-fjord">Projects</h2>
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 								<h4 className="font-medium">Parallels Desktop for Mac Product Pages</h4>
 								<p className="font-normal text-md">This project involved revamping the product pages for Parallels Desktop 19 for Mac to make it more visually cohesive with the Apple website, by implementing scrollable modal pop-ups with information specific to each use case. Further down the page are more cards the user can click on to reveal more information about various product features. The page is built entirely using Bootstrap with numerous style overrides. I also implemented a lazy loading technique on the images on the page so that the page loads faster, and images below the fold only as you scroll down, improving page speed.
 									.</p>
@@ -54,7 +54,7 @@ export default function Home() {
 								<span className="skill">HTML</span><span className="skill">CSS</span><span className="skill">Bootstrap</span><span className="skill">JavaScript</span>
 							</div>
 							
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 								<div className="w-20 py-6 flex justify-center bg-gray-100 bg-opacity-20 rounded-md mb-4">
 									<i data-feather="codesandbox"></i>
 								</div>
@@ -64,7 +64,7 @@ export default function Home() {
 								<p className="font-normal text-md">Lorem ipsum dolor sit amet, consectetur <br /> adipiscing elit, sed do eiusmod tempor <br /> incididunt ut labore et dolore magna aliqua.</p>
 							</div>
 							
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 								<div className="w-20 py-6 flex justify-center bg-gray-100 bg-opacity-20 rounded-md mb-4">
 									<i data-feather="coffee"></i>
 								</div>
@@ -117,41 +117,41 @@ export default function Home() {
 						<p className="font-normal md:text-base mb-10 md:mb-20">Here's what colleagues and clients have said about working with me</p>
 	
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 	
 								<p>Alissa is a skilled front-end developer who consistently meets project expectations with efficiency and professionalism. She has a solid understanding of front-end technologies and delivers functional, well-structured code that aligns with project requirements. Her ability to turn designs into responsive, user-friendly interfaces... <a href="https://www.linkedin.com/in/alissa-bengtson/details/recommendations/" target="_blank">read more</a></p>
 	
 								<h5 className="font-semibold">Delphine M. <span className="font-medium">- Director, Creative Services</span></h5>
 							</div>
 	
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 								<p>To put it simply, Alissa is an extremely talented front end developer. A number of years ago she created a variety of landing pages for my marketing campaigns targeting our WinZip customer base and prospects. I was always impressed with what she produced — engaging and smooth user experience... <a href="https://www.linkedin.com/in/alissa-bengtson/details/recommendations/" target="_blank">read more</a> </p>
 	
 								<h5 className="font-semibold">Rachel P. <span className="font-medium">- Customer Marketing Manager</span></h5>
 							</div>
 	
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 	
 								<p>Alissa is an amazing web front end developer. Her design skills are extraordinary and she has a great work ethic. If you want the job done right, and to look great, then have Alissa do it.</p>
 	
 								<h5 className="font-semibold">Frank W. <span className="font-medium">- Staff Software Engineer</span></h5>
 							</div>
 	
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 	
 								<p>Alissa is the rockstar web-producer behind several successful eDM campaigns at WinZip. Constantly provides high-quality content, on time and always on spec. Highly recommended.</p>
 	
 								<h5 className="font-semibold">Lucas P. <span className="font-medium">- Online Marketing Campaign Manager</span></h5>
 							</div>
 	
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 	
 								<p>Alissa has helped reSET Social Enterprise Trust create a website for its second annual Beyond Business as Usual Conference in October 2011. It was a pleasure to work with her because she used her creative skills to build an extremely successful event website. She worked quickly and put a lot of effort into her work... <a href="https://www.linkedin.com/in/alissa-bengtson/details/recommendations/" target="_blank">read more</a></p>
 	
 								<h5 className="font-semibold">Judith W. <span className="font-medium">- Communications Intern</span></h5>
 							</div>
 	
-							<div className="bg-gray-50/15 px-8 py-10 rounded-md">
+							<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 	
 								<p>Alissa is a creative, expert web designer who will exceed your requirements for any project she takes on. I highly recommend her!
 								</p>
