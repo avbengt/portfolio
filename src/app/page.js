@@ -7,6 +7,7 @@ config.autoAddCss = false;
 import "../styles/globals.css";
 import { useEffect } from "react";
 import "flowbite";
+import Projects from "../components/Projects";
 
 
 export default function Home() {
@@ -21,10 +22,8 @@ export default function Home() {
 		<div id="wrapper">
 			<section id="intro" className="wrapper teal fullscreen fade-up">
 
-
 				<div className="inner flex flex-col lg:flex-row items-center gap-6">
-
-
+			
 					<div className="headshot lg:order-2 w-full lg:w-1/3 flex items-center justify-center">
 						<img src="../../images/headshot.jpg" className="rounded-full brightness-125 grayscale max-w-[200px] lg:max-w-[350px]" />
 					</div>
@@ -61,104 +60,8 @@ export default function Home() {
 				
 			</section>
 
-			<section id="projects" className="h-full wrapper purple">
-				<div className="inner">
-					<h2 className="font-fjord">Projects</h2>
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						
-						<div className="bg-gray-50/5 px-8 py-8 rounded-md">
-							<a href="#parallels-modal" data-modal-target="parallels-modal" data-modal-toggle="parallels-modal">
-								<img src="/images/projects/parallels-thumb.jpg" className="rounded-md" alt="Parallels webpage thumbnail" />
-								<h3>Parallels Desktop for Mac Product Pages <i className="fa fa-external-link" aria-hidden="true"></i></h3>
-								<h5 className="font-normal mb-1">Skills used:</h5>
-								<span className="skill">HTML</span><span className="skill">CSS</span><span className="skill">Bootstrap</span><span className="skill">JavaScript</span>
-							</a>
-						</div>
 
-						<div id="parallels-modal" tabIndex="-1" aria-hidden="true" className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-							<div className="relative p-4 w-full max-w-2xl max-h-full">
-								<div className="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
-									<div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-										<h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-											Parallels Desktop for Mac Product Pages
-										</h3>
-										<button type="button" className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="parallels-modal">
-											<svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-												<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-											</svg>
-											<span className="sr-only">Close modal</span>
-										</button>
-									</div>
-									<div className="p-4 md:p-5 space-y-4">
-										<p className="font-normal text-md">This project involved revamping the product pages for Parallels Desktop 19 for Mac to make it more visually cohesive with the Apple website, by implementing scrollable modal pop-ups with information specific to each use case. Further down the page are more cards the user can click on to reveal more information about various product features. The page is built entirely using Bootstrap with numerous style overrides. I also implemented a lazy loading technique on the images on the page so that the page loads faster, and images below the fold only as you scroll down, improving page speed.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-				
-						<div className="bg-gray-50/5 px-8 py-8 rounded-md">
-							<a href="#alludo-modal" data-modal-target="alludo-modal" data-modal-toggle="alludo-modal">		
-								<img src="/images/projects/alludo-thumb.jpg" className="rounded-md" alt="Alludo website thumbnail" />
-								<h3>Alludo Website</h3>
-								<h5 className="font-normal mb-1">Skills used:</h5>
-								<span className="skill">HTML</span><span className="skill">CSS</span><span className="skill">Bootstrap</span><span className="skill">JavaScript</span>
-							</a>
-						</div>
-
-						<div id="alludo-modal" tabIndex="-1" aria-hidden="true" className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-							<div className="relative p-4 w-full max-w-2xl max-h-full">
-								<div className="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
-									<div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
-										<h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-											Alludo Website
-										</h3>
-										<button type="button" className="text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-hide="alludo-modal">
-											<svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-												<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-											</svg>
-											<span className="sr-only">Close modal</span>
-										</button>
-									</div>
-									<div className="p-4 md:p-5 space-y-4">
-									<p className="font-normal text-md">After a major corporate rebranding, I was tasked with building out various pages of the Alludo company website, including the homepage, which features a series of animations as you scroll down the page. These animations were built with CSS keyframes. A "hidden" feature of this page is that the images and color gradient in the hero change depending on the time of day you view it. This functionality was built using JavaScript.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div className="bg-gray-50/5 px-8 py-8 rounded-md">
-							<a href="#farm-modal" data-modal-target="farm-modal" data-modal-toggle="farm-modal">
-								<img src="/images/projects/farm-thumb.jpg" className="rounded-md" alt="Farm website thumbnail" />
-								<h3>Farm Website</h3>
-								<h5 className="font-normal mb-1">Skills used:</h5>
-								<span className="skill">HTML</span><span className="skill">CSS</span><span className="skill">Bootstrap</span><span className="skill">JavaScript</span>
-							</a>
-						</div>
-
-
-						<div id="farm-modal" tabIndex="-1" aria-hidden="true" className="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full flex">
-							<div className="modal-inner">
-								<div className="relative">
-									<div className="flex items-center justify-between p-4 md:p-5 rounded-t">
-										<h3 className="text-xl font-semibold text-white">
-											Farm Website
-										</h3>
-										<button type="button" className="text-sm w-8 h-8 ms-auto inline-flex justify-center items-center text-white" data-modal-hide="farm-modal">
-											<svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-												<path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-											</svg>
-											<span className="sr-only">Close modal</span>
-										</button>
-									</div>
-									<div className="p-4 md:p-5 space-y-4">
-									<p className="font-normal text-md">Local farm website.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			<Projects />
 
 			<section id="experience" className="wrapper pink">
 				<div className="inner">
