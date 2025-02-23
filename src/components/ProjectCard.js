@@ -3,31 +3,20 @@ import ProjectModal from "./ProjectModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-const ProjectCard = ({ title, description, image, skills = [], children }) => {
+const ProjectCard = ({ title, description, image, skills = [], leftColumnContent, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-white/5 px-8 py-8 rounded-md">
-      <div className="cursor-pointer" onClick={() => setIsOpen(true)}>
+      <div className="cursor-pointer group" onClick={() => setIsOpen(true)}>
 
-
-
-
-
-
-
-<div className="relative">
-  {/* Image */}
-  <img src={image} className="rounded-md border-invert" alt={`${title} thumbnail`} />
-
-  {/* External Link Icon (Perfectly Round, Positioned in Inverted Corner) */}
-  <div className="link-icon absolute bottom-0 right-0 translate-x-3 translate-y-3 w-13 h-13 bg-white/25 hover:bg-white/50 transition text-white rounded-full flex items-center justify-center">
-    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-4 h-4" />
-  </div>
-</div>
-
-
-
+        <div className="relative">
+          {/* Image */}
+          <img src={image} className="rounded-md border-invert" alt={`${title} thumbnail`} />
+          <div className="link-icon absolute bottom-0 right-0 w-10 h-10 bg-white/25 group-hover:bg-white/35 transition text-white rounded-tl-[20px] rounded-tr-[.375rem]  rounded-br-[.375rem] rounded-bl-[.375rem] flex items-center justify-center">
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-4 h-4" />
+          </div>
+        </div>
 
         <h3>{title}</h3>
         <p>{description}</p>
@@ -43,10 +32,14 @@ const ProjectCard = ({ title, description, image, skills = [], children }) => {
       </div>
 
       {isOpen && (
-        <ProjectModal title={title} onClose={() => setIsOpen(false)}>
-          {children}
-        </ProjectModal>
-      )}
+          <ProjectModal 
+          title={title} 
+          leftColumnContent={leftColumnContent} 
+          onClose={() => setIsOpen(false)}
+          >
+            {children}
+          </ProjectModal>
+        )}
     </div>
   );
 };
