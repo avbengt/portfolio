@@ -17,11 +17,11 @@ const ProjectModal = ({ title, leftColumnContent, children, onClose }) => {
   return (
     <div
       id="modal-overlay"
-      className="fixed inset-0 flex items-center justify-center z-50 bg-black/60 p-4"
+      className="fixed inset-0 flex items-center justify-center z-50 bg-black/60 xl:p-4"
       onClick={handleOverlayClick}
     >
       {/* Modal Container - This Scrolls */}
-      <div className="modal relative w-full max-w-[1400px] max-h-[90vh] bg-[#1b1b1b] rounded-lg shadow-lg overflow-y-auto scrollbar-custom">
+      <div className="modal relative w-full max-w-[1400px] h-full bg-[#1b1b1b] rounded-lg shadow-lg overflow-y-auto scrollbar-custom">
         
         {/* Sticky Close Button */}
         <div className="sticky top-0 left-0 right-0 flex justify-end h-[70px] bg-[#1b1b1b] z-50">

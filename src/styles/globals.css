@@ -759,8 +759,8 @@ min-height: 100vh;
 
 .icon-dl {
     display: inline-block;
-    width: .9rem;
-    height: .9rem;
+    width: 1rem;
+    height: 1rem;
     background-image: url('/images/icon-dl.svg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -810,6 +810,32 @@ margin-bottom: 4px;
     background-color: #2d8a7e;
 }
 
+.modal .caption {
+    @apply italic mt-4 mb-10 text-sm;
+}
+
+.modal .caption span {
+    display: block;
+    font-style: normal;
+    margin-top: .5rem;
+}
+.modal .icon {
+    margin-left: .25rem;
+}
+.modal a.no-underline {
+    border-bottom: 0 !important;
+}
+
+.modal a {
+    border-bottom: 2px solid #42a2a6;
+    padding-bottom: 2px;
+}
+
+.modal a:hover {
+    color: #42a2a6;
+    @apply transition;
+}
+
 #projects img {
     --r: .375rem; /* radius */
     --s: 30px; /* size of inner curve */
@@ -842,8 +868,8 @@ margin-bottom: 4px;
 .modal button {
     all: unset;
     position: absolute;
-    right: 1.75rem;
-    top: 1.75rem;
+    right: 1rem;
+    top: 1.25rem;
     padding: .5rem;
     cursor: pointer;
 }

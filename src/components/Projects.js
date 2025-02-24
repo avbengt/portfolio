@@ -1,4 +1,7 @@
 import ProjectCard from "./ProjectCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Projects = () => {
   return (
@@ -19,8 +22,8 @@ const Projects = () => {
                 <p>Further down the page are cards the user can click on to reveal more information about various product features.</p>
                 <p>The page is built entirely using Bootstrap with numerous style overrides. I also implemented a lazy loading technique on the images on the page so that the page loads faster, and images below the fold only load as you scroll down, improving page speed.</p>
 
-                <h4 className="mt-4">Skills and tools used:</h4>
-                <div className="flex flex-wrap gap-2 mt-2">
+                <h5 className="font-normal mb-1">Skills and tools used:</h5>
+                <div className="flex flex-wrap mt-2">
                   {["HTML", "CSS", "Bootstrap", "JavaScript", "Git", "Jenkins"].map((skill, i) => (
                     <span key={i} className="skill px-2 py-1 bg-gray-800 text-white rounded-md">{skill}</span>
                   ))}
@@ -29,12 +32,16 @@ const Projects = () => {
             )}
           >
             {/* Right Column Content (Scrollable Section) */}
-            <div>
+            <div className="text-center">
               <img src="../../images/projects/parallels/parallels-1.png" />
+              <p className="caption">Parallels Desktop 19 for Mac
+              <span><a href="https://www.parallels.com/products/desktop/" target="_blank">View live site <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></span></p>
               <img src="../../images/projects/parallels/parallels-2.png" />
+              <p className="caption">Parallels Desktop 19 for Mac Pro Edition
+              <span><a href="https://www.parallels.com/products/desktop/pro/" target="_blank">View live site <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></span></p>
               <img src="../../images/projects/parallels/parallels-3.png" />
-              <h2 className="text-lg font-bold">Details</h2>
-              <p className="mb-4">This section contains more content...</p>
+              <p className="caption">Parallels Desktop 19 for Mac Business Edition
+              <span><a href="https://www.parallels.com/products/business/" target="_blank">View live site <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></span></p>
             </div>
           </ProjectCard>
 
@@ -44,19 +51,29 @@ const Projects = () => {
             description="Built various pages during a major rebrand."
             image="/images/projects/alludo-thumb.jpg"
             skills={["HTML", "CSS", "JavaScript", "Bootstrap", "Git", "Jenkins"]}
+            leftColumnContent={(
+              <>
+                <p>After a major corporate rebranding, I was tasked with building out various pages of the Alludo company website, including the homepage, which features a series of animations as you scroll down the page. These animations were built with CSS keyframes.</p>
+                <p>A "hidden" feature of this page is that the images and color gradient in the hero change depending on the time of day you view it. This functionality was built using JavaScript.</p>
+                <p><a href="https://www.alludo.com/" target="_blank">View live site <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
+
+                <h5 className="font-normal mb-1">Skills and tools used:</h5>
+                <div className="flex flex-wrap mt-2">
+                  {["HTML", "CSS", "Bootstrap", "JavaScript", "Git", "Jenkins"].map((skill, i) => (
+                    <span key={i} className="skill px-2 py-1 bg-gray-800 text-white rounded-md">{skill}</span>
+                  ))}
+                </div>
+              </>
+            )}
           >
             {/* Right Column Content (Scrollable Section) */}
-            <div>
-              <h2 className="text-lg font-bold">Details</h2>
-              <p className="mb-4">After a major corporate rebranding, I helped build several pages, including an animated homepage.</p>
-              <p>⭐ The images and gradient change dynamically based on the time of day.</p>
-              <div className="space-y-4">
-                {Array(20).fill(0).map((_, i) => (
-                  <p key={i} className="p-2 border rounded-md">
-                    Additional project details {i + 1}
-                  </p>
-                ))}
-              </div>
+            <div className="text-center">
+              <img src="../../images/projects/alludo/alludo-1.png" />
+              <p className="caption">Alludo Homepage (Morning)</p>
+              <img src="../../images/projects/alludo/alludo-2.png" />
+              <p className="caption">Alludo Homepage (Mid-day)</p>
+              <img src="../../images/projects/alludo/alludo-3.png" />
+              <p className="caption">Alludo Homepage (Night)</p>
             </div>
           </ProjectCard>
 
@@ -65,23 +82,31 @@ const Projects = () => {
             title="Farm Website"
             description="Local farm website for an organic produce company."
             image="/images/projects/farm-thumb.jpg"
-            skills={["HTML", "CSS", "JavaScript"]}
+            skills={["HTML", "CSS", "JavaScript", "Adobe Photoshop"]}
+            leftColumnContent={(
+              <>
+                <p>Responsive website built for a local farm. This was a refresh of an existing website. The goal was to bring the appearance and functionality more up to date, as well as make it responsive for mobile users.</p>
+                <a href="https://github.com/avbengt/cold-spring-brook-farm" className="no-underline">
+								<FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.75rem" }} className="icon-social no-underline" /></a>
+
+                <h5 className="font-normal mb-1">Skills and tools used:</h5>
+                <div className="flex flex-wrap mt-2">
+                  {["HTML", "CSS", "JavaScript", "Adobe Photoshop"].map((skill, i) => (
+                    <span key={i} className="skill px-2 py-1 bg-gray-800 text-white rounded-md">{skill}</span>
+                  ))}
+                </div>
+              </>
+            )}
           >
+            
             {/* Right Column Content (Scrollable Section) */}
-            <div>
-              <h2 className="text-lg font-bold">Details</h2>
-              <p>Built a simple yet engaging site for a local farm business.</p>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="YouTube video"
-                frameBorder="0"
-                allowFullScreen
-              ></iframe>
-              <a href="https://example.com" target="_blank" className="button">
-                View Project
-              </a>
+            <div className="text-center justify-items-center">
+              <img src="../../images/projects/farm/farm-1.png" />
+              <p className="caption">Homepage (Desktop)</p>
+              <img src="../../images/projects/farm/farm-2.png" className="max-w-[400px]" />
+              <p className="caption">Homepage (Mobile)</p>
+              <img src="../../images/projects/farm/farm-3.png" className="max-w-[400px]" />
+              <p className="caption">Hamburger Menu (Mobile)</p>
             </div>
           </ProjectCard>
 
