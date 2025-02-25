@@ -103,9 +103,9 @@ const Projects = () => {
             <div className="text-center justify-items-center">
               <img src="../../images/projects/farm/farm-1.png" />
               <p className="caption">Homepage (Desktop)</p>
-              <img src="../../images/projects/farm/farm-2.png" className="max-w-[400px]" />
+              <img src="../../images/projects/farm/farm-2.png" className="max-w-full sm:max-w-[400px]" />
               <p className="caption">Homepage (Mobile)</p>
-              <img src="../../images/projects/farm/farm-3.png" className="max-w-[400px]" />
+              <img src="../../images/projects/farm/farm-3.png" className="max-w-full sm:max-w-[400px]" />
               <p className="caption">Hamburger Menu (Mobile)</p>
             </div>
           </ProjectCard>
