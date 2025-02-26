@@ -86,7 +86,7 @@ const Projects = () => {
             leftColumnContent={(
               <>
                 <p>Responsive website built for a local farm. This was a refresh of an existing website. The goal was to bring the appearance and functionality more up to date, as well as make it responsive for mobile users.</p>
-                <a href="https://github.com/avbengt/cold-spring-brook-farm" className="no-underline">
+                <a href="https://github.com/avbengt/cold-spring-brook-farm" target="_blank" className="no-underline">
 								<FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.75rem" }} className="icon-social no-underline" /></a>
 
                 <h5 className="font-normal mb-1">Skills and tools used:</h5>

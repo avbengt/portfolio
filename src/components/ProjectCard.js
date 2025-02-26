@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, image, skills = [], leftColumnContent
 
         {skills.length > 0 && (
           <div>
-            <h5 className="font-normal mb-1">Skills used:</h5>
+            <h5 className="font-normal mb-1">Skills and tools used:</h5>
             {skills.map((skill, i) => (
               <span key={i} className="skill">{skill}</span>
             ))}

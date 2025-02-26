@@ -50,7 +50,7 @@ export default function Home() {
 						</div>
 
 						<p>I'm a passionate front-end web developer with over 13 years of experience creating user-friendly, visually appealing, and responsive websites. I specialize in transforming designs into functional and seamless digital experiences.</p>
-						<a href="/docs/alissa-bengtson-resume.pdf" target="_blank" className="button hover:bg-black flex items-center space-x-2">
+						<a href="/docs/alissa-bengtson-resume.pdf" target="_blank" className="button !bg-black/35 hover:!bg-black flex items-center space-x-2 mt-4">
 							Get resume <span className="icon-dl"></span>
 						</a>
 					</div>
@@ -63,42 +63,29 @@ export default function Home() {
 
 			<Projects />
 
-			<section id="experience" className="wrapper pink">
+			<section id="experience" className="wrapper purple-alt">
 				<div className="inner">
 
-					<h2 className="font-fjord">Experience</h2>
-
-					<p className="font-normal md:text-base mb-20">Below is a summary of my experience</p>
-
-					<div className="flex flex-col lg:flex-row justify-between">
-						<div className="space-y-8 md:space-y-16 mb-16 md:mb-0">
-							<p className="font-semibold text-base">Alludo (formerly Corel Corporation) <span className="font-normal">/ Remote</span></p>
-						</div>
-
-						<div className="space-y-8 md:space-y-16 mb-16 md:mb-0">
-							<p className="font-normal text-base">Web Producer</p>
-						</div>
-
-						<div className="space-y-8 md:space-y-16">
-							<p className="font-normal text-base">2011-2024</p>
-						</div>
-					</div>
-
-					<h3 className="font-fjord">Brands</h3>
-					<p className="font-normal md:text-base mb-10 md:mb-20">Some brands I proudly helped shape at my last role:</p>
-					<div className="brands grid grid-cols-2 md:grid-cols-4">
+					<h2 className="font-fjord">Brands</h2>
+					<p className="font-normal md:text-base mb-10 md:mb-20">Some brands I proudly helped shape at my last role</p>
+					<div className="brands grid grid-cols-2 md:grid-cols-4 my-10">
 						<img src="/images/brand-1.png" className="white-mask" alt="Parallels logo" />
 						<img src="/images/brand-2.png" className="white-mask" alt="MindManager logo" />
 						<img src="/images/brand-3.png" className="white-mask" alt="Corel logo" />
 						<img src="/images/brand-4.png" className="white-mask" alt="WinZip logo" />
 					</div>
+					<div className="text-center">
+						<a href="/docs/alissa-bengtson-resume.pdf" target="_blank" className="button !bg-black/35 hover:!bg-black flex items-center space-x-2 mt-4">
+							Get resume <span className="icon-dl"></span>
+						</a>
+					</div>
 				</div>
 			</section>
 
-			<section id="recommendations" className="wrapper purple pb-10">
+			<section id="recommendations" className="wrapper purple">
 				<div className="inner">
 					<h2 className="font-fjord">Recommendations</h2>
-					<p className="font-normal md:text-base mb-10 md:mb-20">Here's what colleagues and clients have said about working with me</p>
+					<p className="font-normal mb-9">Here's what colleagues and clients have said about working with me</p>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
@@ -142,9 +129,8 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="text-center">
-
-						<a href="https://www.linkedin.com/in/alissa-bengtson/details/recommendations/" target="_blank" className="mt-6 button border-black !bg-black hover:!bg-black/40 flex items-center space-x-2">
+					<div className="text-center mt-12">
+						<a href="https://www.linkedin.com/in/alissa-bengtson/details/recommendations/" target="_blank" className="button !bg-black/35 hover:!bg-black flex items-center space-x-2">
 							See more on LinkedIn
 						</a>
 					</div>

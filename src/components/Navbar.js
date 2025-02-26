@@ -13,7 +13,7 @@ export default function Navbar() {
                     <ul className="uppercase">
                         <li><a href="#intro" className="intro scrolly active">Welcome</a></li>
                         <li><a href="#projects" className="projects scrolly">Projects</a></li>
-                        <li><a href="#experience" className="experience scrolly">Experience</a></li>
+                        <li><a href="#experience" className="experience scrolly">Brands</a></li>
                         <li><a href="#recommendations" className="recommendations scrolly">Recommendations</a></li>
                     </ul>
                 </nav>
