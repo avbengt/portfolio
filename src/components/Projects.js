@@ -80,7 +80,7 @@ const Projects = () => {
           {/* Third Project */}
           <ProjectCard
             title="Farm Website"
-            description="Local farm website for an organic produce company."
+            description="Local farm website refresh."
             image="/images/projects/farm-thumb.jpg"
             skills={["HTML", "CSS", "JavaScript", "Adobe Photoshop"]}
             leftColumnContent={(
