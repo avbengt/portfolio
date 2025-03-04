@@ -32,7 +32,7 @@ export default function Home() {
 					<div className="info sm:order-1 w-full lg:w-2/3 max-h-max text-center lg:text-start">
 						<span className="font-fjord text-xl font-bold text-white !mb-0">Hi, I'm</span>
 						<h1 className="font-fjord nobreak !mt-1 !mb-3">Alissa Bengtson!</h1>
-						<h2 className="font-fjord !mt-1">Front-End Web Developer</h2>
+						<h2 className="font-fjord !mt-1">Frontend Software Engineer</h2>
 						<div className="socials mt-5 mb-8">
 							<div className="flex items-center justify-center lg:justify-start space-x-6">
 								<a href="https://www.linkedin.com/in/alissa-bengtson/" target="_blank">
@@ -49,7 +49,7 @@ export default function Home() {
 							</div>
 						</div>
 
-						<p>I'm a passionate front-end web developer with over 13 years of experience creating user-friendly, visually appealing, and responsive websites. I specialize in transforming designs into functional and seamless digital experiences.</p>
+						<p>I'm a passionate frontend software engineer with over 13 years of experience creating user-friendly, visually appealing, and responsive websites. I specialize in transforming designs into functional and seamless digital experiences.</p>
 						<a href="/docs/alissa-bengtson-resume.pdf" target="_blank" className="button !bg-black/35 hover:!bg-black flex items-center space-x-2 mt-4">
 							Get resume <span className="icon-dl"></span>
 						</a>
