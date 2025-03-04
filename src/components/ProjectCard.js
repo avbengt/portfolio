@@ -32,14 +32,14 @@ const ProjectCard = ({ title, description, image, skills = [], leftColumnContent
       </div>
 
       {isOpen && (
-          <ProjectModal 
-          title={title} 
-          leftColumnContent={leftColumnContent} 
+        <ProjectModal
+          title={title}
+          leftColumnContent={leftColumnContent}
           onClose={() => setIsOpen(false)}
-          >
-            {children}
-          </ProjectModal>
-        )}
+        >
+          {children}
+        </ProjectModal>
+      )}
     </div>
   );
 };

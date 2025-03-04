@@ -13,17 +13,17 @@ import Projects from "../components/Projects";
 export default function Home() {
 	// Initialize Flowbite when the component mounts
 	useEffect(() => {
-	  if (window.Flowbite) {
-		window.Flowbite.init();
-	  }
+		if (window.Flowbite) {
+			window.Flowbite.init();
+		}
 	}, []);
 
-  	return (
+	return (
 		<div id="wrapper">
 			<section id="intro" className="wrapper teal fullscreen fade-up">
 
 				<div className="inner flex flex-col lg:flex-row items-center gap-6">
-			
+
 					<div className="headshot lg:order-2 w-full lg:w-1/3 flex items-center justify-center">
 						<img src="../../images/headshot.jpg" className="rounded-full brightness-125 grayscale max-w-[200px] lg:max-w-full" />
 					</div>
@@ -32,15 +32,15 @@ export default function Home() {
 					<div className="info sm:order-1 w-full lg:w-2/3 max-h-max text-center lg:text-start">
 						<span className="font-fjord text-xl font-bold text-white !mb-0">Hi, I'm</span>
 						<h1 className="font-fjord nobreak !mt-1 !mb-3">Alissa Bengtson!</h1>
-						<h2 className="font-fjord !mt-1">Front-End Web Developer</h2>					
+						<h2 className="font-fjord !mt-1">Front-End Web Developer</h2>
 						<div className="socials mt-5 mb-8">
 							<div className="flex items-center justify-center lg:justify-start space-x-6">
 								<a href="https://www.linkedin.com/in/alissa-bengtson/" target="_blank">
-								<FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1.75rem" }} className="icon-social" />
+									<FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1.75rem" }} className="icon-social" />
 								</a>
 
 								<a href="https://github.com/avbengt" target="_blank">
-								<FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.75rem" }} className="icon-social" />
+									<FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.75rem" }} className="icon-social" />
 								</a>
 
 								{/* <a href="https://codepen.io/avbengt" target="_blank">
@@ -57,7 +57,7 @@ export default function Home() {
 
 				</div>
 
-				
+
 			</section>
 
 
@@ -89,19 +89,19 @@ export default function Home() {
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
 
-						
+
 						<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 							<p>Alissa is a talented front-end web developer that I have had the pleasure working with for about 10 years. Was it really that long? She has a deep passion for crafting engaging, user-friendly web experiences. Her expertise extends to modern frameworks like React and Tailwind and brings a good eye for design with experience in tools like... <a href="https://www.linkedin.com/in/alissa-bengtson/details/recommendations/" target="_blank">read more</a></p>
 
 							<p className="h5 font-semibold">Greg G. <span className="font-medium">- VP, Brand &amp; Creative</span></p>
 						</div>
-						
+
 						<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 							<p>Alissa is an amazing collaborator and team mate. Working together at Corel, I was really impressed with how Alissa managed the large volume of work with creativity and poise. She is a great front-end dev and someone who really cares about the end product and user experience. Highly recommended.</p>
 
 							<p className="h5 font-semibold">Jeremy P. <span className="font-medium">- Senior Web Producer</span></p>
 						</div>
-						
+
 						<div className="bg-gray-50/5 px-8 py-10 rounded-md">
 							<p>Alissa is a skilled front-end developer who consistently meets project expectations with efficiency and professionalism. She has a solid understanding of front-end technologies and delivers functional, well-structured code that aligns with project requirements. Her ability to turn designs into responsive, user-friendly interfaces... <a href="https://www.linkedin.com/in/alissa-bengtson/details/recommendations/" target="_blank">read more</a></p>
 
@@ -136,6 +136,6 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-        </div>
-  );
+		</div>
+	);
 }
