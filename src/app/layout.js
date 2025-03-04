@@ -6,8 +6,8 @@ import Script from "next/script";
 import "flowbite";
 
 export const metadata = {
-  title: "Alissa Bengtson | Portfolio",
-  description: "Front-End Web Developer Portfolio",
+  title: "Alissa Bengtson",
+  description: "Alissa Bengtson is a front-end web developer who builds modern, accessible, and engaging digital experiences for the web.",
 };
 
 export default function RootLayout({ children }) {
@@ -17,6 +17,16 @@ export default function RootLayout({ children }) {
         {/* Metadata */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content="/og.png" />
+        <meta property="og:url" content="https://alissa.dev" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content="/og.png" />
+        <meta name="twitter:url" content="https://alissa.dev" />
 
         {/* Fonts */}
         <link
