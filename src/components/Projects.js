@@ -12,7 +12,7 @@ const Projects = () => {
 
           {/* First Project */}
           <ProjectCard
-            title="Parallels Desktop for Mac Product Pages"
+            title="Parallels Desktop for Mac Product&nbsp;Pages"
             description="Revamped product pages to align with Apple's design."
             image="/images/projects/parallels-thumb.jpg"
             skills={["HTML", "CSS", "JavaScript", "Bootstrap", "Django", "Git", "Jenkins"]}
