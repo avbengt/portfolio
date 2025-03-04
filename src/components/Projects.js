@@ -52,8 +52,7 @@ const Projects = () => {
             skills={["HTML", "CSS", "JavaScript", "Bootstrap", "Git", "Jenkins"]}
             leftColumnContent={(
               <>
-                <p>After a major corporate rebranding, I was tasked with building out various pages of the Alludo company website, including the homepage, which features a series of animations as you scroll down the page. These animations were built with CSS keyframes.</p>
-                <p>A "hidden" feature of this page is that the images and color gradient in the hero change depending on the time of day you view it. This functionality was built using JavaScript.</p>
+                <p>After a major corporate rebranding, I was tasked with building out various pages of the Alludo company website, including the homepage, which features a series of animations as you scroll down the page. These animations were built with CSS keyframes. The images and color gradient in the hero also change depending on the time of day you view the site.</p>
                 <p><a href="https://www.alludo.com/" target="_blank">View live site <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
 
                 <h5 className="font-normal mb-1">Skills and tools used:</h5>
@@ -85,6 +84,7 @@ const Projects = () => {
             leftColumnContent={(
               <>
                 <p>Responsive website built for a local farm. This was a refresh of an existing website. The goal was to bring the appearance and functionality more up to date, as well as make it responsive for mobile users.</p>
+                <p>This website is available to view on GitHub:</p>
                 <a href="https://github.com/avbengt/cold-spring-brook-farm" target="_blank" className="no-underline">
                   <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1.75rem" }} className="icon-social no-underline" /></a>
 
