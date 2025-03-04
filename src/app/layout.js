@@ -7,7 +7,7 @@ import "flowbite";
 
 export const metadata = {
   title: "Alissa Bengtson",
-  description: "Alissa Bengtson is a frontend software engineer who builds modern, accessible, and engaging digital experiences for the web.",
+  description: "Alissa Bengtson is a front-end web developer who builds modern, accessible, and engaging digital experiences for the web.",
 };
 
 export default function RootLayout({ children }) {
