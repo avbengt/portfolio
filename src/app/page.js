@@ -56,10 +56,7 @@ export default function Home() {
 					</div>
 
 				</div>
-
-
 			</section>
-
 
 			<Projects />
 
@@ -85,7 +82,7 @@ export default function Home() {
 			<section id="recommendations" className="wrapper purple">
 				<div className="inner">
 					<h2 className="font-fjord">Recommendations</h2>
-					<p className="font-normal mb-9">Here's what colleagues and clients have said about working with me</p>
+					<p className="font-normal pb-4">Here's what colleagues and clients have said about working with me</p>
 
 					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
 

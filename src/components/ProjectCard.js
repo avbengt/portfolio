@@ -3,7 +3,7 @@ import ProjectModal from "./ProjectModal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
-const ProjectCard = ({ title, description, image, skills = [], leftColumnContent, children }) => {
+const ProjectCard = ({ title, description, image, skills, note = [], leftColumnContent, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,7 +18,14 @@ const ProjectCard = ({ title, description, image, skills = [], leftColumnContent
           </div>
         </div>
 
-        <h3>{title}</h3>
+        <h3>
+          {note && note.length > 0 && (
+            <div className="mb-[10px]">
+              <span className="text-sm italic inline bg-[#42a2a6] px-[5px] py-[2px] rounded-sm">{note}</span>
+            </div>
+          )}
+          {title}
+        </h3>
         <p>{description}</p>
 
         {skills.length > 0 && (
@@ -34,6 +41,7 @@ const ProjectCard = ({ title, description, image, skills = [], leftColumnContent
       {isOpen && (
         <ProjectModal
           title={title}
+          note={note}
           leftColumnContent={leftColumnContent}
           onClose={() => setIsOpen(false)}
         >

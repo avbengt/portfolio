@@ -9,8 +9,162 @@ const Projects = () => {
       <div className="inner">
         <h2 className="font-fjord">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* <ProjectCard
+            note="Work-in-Progress"
+            title="AOL Instant Messenger Revival"
+            description="A faithful, modern web re-creation of classic AIM with draggable windows, taskbar toggles, and nostalgic Windows XP styling."
+            image="/images/projects/aim/aim-thumb.jpg"
+            skills={[
+              "React",
+              "Next.js",
+              "Tailwind CSS",
+              "Firebase (Auth/Firestore)",
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "Cursor",
+              "Git",
+              "Vercel",
+            ]}
+            leftColumnContent={
+              <>
+                <p>
+                  This ongoing project recreates the look and feel of AOL Instant Messenger for the web.
+                  It includes a draggable Login window and Buddy List, a taskbar button
+                  that reflects active state and toggles visibility, and chat windows that currently pop
+                  out via <code>window.open()</code> to mimic classic AIM behavior.
+                </p>
 
-          {/* First Project */}
+                <p className="mt-2">
+                  I built this project mostly out of nostalgia. AIM was such a huge part of my childhood
+                  and I just loved everything about it. Re-creating it now is my way of bringing back that
+                  classic experience I miss so much, while having fun experimenting with React, Next.js,
+                  and modern web tools.
+                </p>
+
+                <p className="mt-2">
+                  I use <strong>Cursor</strong> (AI-powered editor) to speed up development, generate snippets, and debug tricky UI behavior (dragging bounds, window focus, etc.).
+                  Firebase (Auth + Firestore) is used for sign-in, presence, and message history.
+                </p>
+
+                <h5 className="font-normal mb-1 mt-4">Core highlights:</h5>
+                <div className="space-y-1 mt-2 text-sm leading-6">
+                  <ul className="list-disc list-outside ml-4 space-y-1">
+                    <li>Draggable windows with bounds-clamping to keep them on screen</li>
+                    <li>Buddy List → double-click opens chats in separate pop-out windows</li>
+                    <li>Window focus/stacking states (active window gets topmost z-index)</li>
+                    <li>Nostalgic UI details</li>
+                    <li>Planned: Classic AIM sounds, emoticons, buddy icons and profiles</li>
+                  </ul>
+                </div>
+
+                <h5 className="font-normal mb-1 mt-4">Skills and tools used:</h5>
+                <div className="flex flex-wrap mt-2 gap-2">
+                  {[
+                    "React",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "Firebase (Auth/Firestore)",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Cursor",
+                    "Git",
+                    "Vercel",
+                  ].map((skill, i) => (
+                    <span key={i} className="skill px-2 py-1 bg-gray-800 text-white rounded-md">{skill}</span>
+                  ))}
+                </div>
+              </>
+            }
+          >
+            <div className="text-center">
+              <img src="/images/projects/aim/aim-login.png" alt="AIM Revival Login Window" />
+              <p className="caption">
+                Login Window (draggable, XP-style chrome)
+                <span>
+                  <a href="https://aim.alissa.dev" target="_blank" rel="noreferrer">
+                    View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" />
+                  </a>
+                </span>
+              </p>
+            </div>
+          </ProjectCard> */}
+
+          <ProjectCard
+            note="Work-in-Progress"
+            title="Weather App"
+            description="A fast, elegant weather app with city/ZIP search, geolocation, hourly/day forecasts, unit toggles, and detailed conditions."
+            image="/images/projects/weather-thumb.jpg"
+            skills={[
+              "Next.js",
+              "React",
+              "Tailwind CSS",
+              "OpenWeather One Call API",
+              "Google Places Autocomplete",
+              "Geolocation API",
+              "JavaScript",
+              "Git",
+              "Vercel",
+            ]}
+            leftColumnContent={
+              <>
+
+                <p><a href="https://weather.alissa.dev/" target="_blank">View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
+                <p>
+                  A clean, responsive weather app built with Next.js and Tailwind 4. Users can search by city or ZIP with Google Places Autocomplete, or simply allow geolocation to fetch local conditions instantly. The app displays current conditions, hourly and 7-day forecasts, dew point, UV index, humidity, pressure, wind, and sunrise/sunset. Also included are a F°/C° toggle, beautiful weather condition images (created by <a href="https://stock.adobe.com/contributor/205324907/4zevar" target="_blank" rel="noreferrer">4zevar</a>), and a full moon-phase system that maps OpenWeather's numeric phase to readable labels and SVGs.
+                </p>
+
+                <p className="mt-2">
+                  The UI changes by time of day with gentle gradient backgrounds, and the whole experience is tuned for both mobile and desktop.
+                </p>
+
+                <h5 className="font-normal mb-1 mt-4">Highlights:</h5>
+                <div className="space-y-1 mt-2 text-sm leading-6">
+                  <ul className="list-disc list-outside ml-4 space-y-1">
+                    <li>Geolocation detection for instant local weather</li>
+                    <li>Search with Google Places Autocomplete (city or ZIP)</li>
+                    <li>OpenWeather One Call: current, hourly, 7-day</li>
+                    <li>Unit toggle between Celsius and Fahrenheit</li>
+                    <li>Moon phase mapping → readable labels and custom SVG icons</li>
+                    <li>Time-of-day gradient system via hourly CSS classes</li>
+                    <li>Mobile-first UX</li>
+                  </ul>
+                </div>
+
+                <h5 className="font-normal mb-1 mt-4">Skills and tools used:</h5>
+                <div className="flex flex-wrap mt-2 gap-2">
+                  {[
+                    "Next.js",
+                    "React",
+                    "Tailwind CSS",
+                    "OpenWeather One Call API",
+                    "Google Places Autocomplete",
+                    "Geolocation API",
+                    "JavaScript",
+                    "Git",
+                    "Vercel",
+                  ].map((skill, i) => (
+                    <span key={i} className="skill px-2 py-1 bg-gray-800 text-white rounded-md">{skill}</span>
+                  ))}
+                </div>
+              </>
+            }
+          >
+            {/* Right Column Content (Scrollable Section) */}
+            <div className="text-center flex flex-col items-center">
+              <img src="/images/projects/weather/weather-1.png" alt="Weather App Desktop" />
+              <p className="caption">
+                Desktop view, daytime color scheme
+              </p>
+              <img src="/images/projects/weather/weather-2.png" className="w-1/2" alt="Weather App Mobile" />
+              <p className="caption">
+                Mobile view, sunset color scheme
+              </p>
+              <p><a href="https://weather.alissa.dev/" target="_blank">View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
+            </div>
+          </ProjectCard>
+
           <ProjectCard
             title="Parallels Desktop for Mac Product&nbsp;Pages"
             description="Revamped product pages to align with Apple's design."
@@ -44,7 +198,6 @@ const Projects = () => {
             </div>
           </ProjectCard>
 
-          {/* Second Project */}
           <ProjectCard
             title="Alludo Website"
             description="Built various pages during a major rebrand."
@@ -75,7 +228,6 @@ const Projects = () => {
             </div>
           </ProjectCard>
 
-          {/* Third Project */}
           <ProjectCard
             title="Farm Website"
             description="Local farm website refresh."

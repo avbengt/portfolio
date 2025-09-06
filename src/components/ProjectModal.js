@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-const ProjectModal = ({ title, leftColumnContent, children, onClose }) => {
+const ProjectModal = ({ title, note, leftColumnContent, children, onClose }) => {
   const handleOverlayClick = (e) => {
     if (e.target.id === "modal-overlay") {
       onClose();
@@ -22,11 +22,11 @@ const ProjectModal = ({ title, leftColumnContent, children, onClose }) => {
     >
       {/* Modal Container - This Scrolls */}
       <div className="modal relative w-full max-w-[1400px] h-full bg-[#1b1b1b] rounded-lg shadow-lg overflow-y-auto scrollbar-custom">
-        
+
         {/* Sticky Close Button */}
         <div className="sticky top-0 left-0 right-0 flex justify-end h-[70px] bg-[#1b1b1b] z-50">
-          <button 
-            onClick={onClose} 
+          <button
+            onClick={onClose}
             className="w-10 h-10 p-2 rounded-full cursor-pointer hover:bg-gray-700 group"
           >
             <svg
@@ -49,18 +49,23 @@ const ProjectModal = ({ title, leftColumnContent, children, onClose }) => {
 
         {/* Modal Content */}
         <div className="p-16 pt-0">
-        <div className="relative flex flex-col xl:flex-row gap-6 h-full">
-          
-          {/* Left Column (Fixed Position, Never Moves) */}
-          <div className="xl:sticky top-[70px] w-full xl:w-2/5 xl:pe-6 pt-0 h-auto xl:h-full overflow-hidden">
-            <h2 className="mt-0">{title}</h2>
-            <div>{leftColumnContent}</div>
-          </div>
+          <div className="relative flex flex-col xl:flex-row gap-6 h-full">
 
-          {/* Right Column (Scrollable) */}
-          <div className="w-full xl:w-3/5 xl:ps-6 pt-6 overflow-y-auto">
-            {children}
-          </div>
+            {/* Left Column (Fixed Position, Never Moves) */}
+            <div className="xl:sticky top-[70px] w-full xl:w-2/5 xl:pe-6 pt-0 h-auto xl:h-full overflow-hidden">
+              {note && note.length > 0 && (
+                <div className="mb-[5px]">
+                  <span className="text-base font-bold italic inline bg-[#5052b5] px-[5px] py-[2px] rounded-sm">{note}</span>
+                </div>
+              )}
+              <h2 className="mt-0!">{title}</h2>
+              <div>{leftColumnContent}</div>
+            </div>
+
+            {/* Right Column (Scrollable) */}
+            <div className="w-full xl:w-3/5 xl:ps-6 pt-6 overflow-y-auto">
+              {children}
+            </div>
           </div>
         </div>
       </div>
