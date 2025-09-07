@@ -251,7 +251,7 @@ const Projects = () => {
           >
 
             {/* Right Column Content (Scrollable Section) */}
-            <div className="text-center justify-items-center">
+            <div className="text-center flex flex-col items-center justify-items-center">
               <img src="../../images/projects/farm/farm-1.png" />
               <p className="caption">Homepage (Desktop)</p>
               <img src="../../images/projects/farm/farm-2.png" className="max-w-full sm:max-w-[400px]" />
