@@ -160,8 +160,7 @@ const Projects = () => {
               <img src="/images/projects/weather/weather-2.png" className="w-1/2" alt="Weather App Mobile" />
               <p className="caption">
                 Mobile view, sunset color scheme
-              </p>
-              <p><a href="https://weather.alissa.dev/" target="_blank">View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
+                <span className="block"><a href="https://weather.alissa.dev/" target="_blank">View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></span></p>
             </div>
           </ProjectCard>
 
