@@ -819,7 +819,14 @@ body.is-preload .wrapper.fade>.inner {
     padding-bottom: 2px;
 }
 
-.modal a:hover {
+.modal a.body-link {
+    border-bottom: 1px solid #42a2a6;
+    padding-bottom: 0px;
+    font-weight: normal;
+}
+
+.modal a:hover,
+.modal a.body-link:hover {
     color: #42a2a6;
     @apply transition;
 }

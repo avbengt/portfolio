@@ -9,11 +9,11 @@ const Projects = () => {
       <div className="inner">
         <h2 className="font-fjord">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* <ProjectCard
+          <ProjectCard
             note="Work-in-Progress"
             title="AOL Instant Messenger Revival"
             description="A faithful, modern web re-creation of classic AIM with draggable windows, taskbar toggles, and nostalgic Windows XP styling."
-            image="/images/projects/aim/aim-thumb.jpg"
+            image="/images/projects/aim-thumb.jpg"
             skills={[
               "React",
               "Next.js",
@@ -28,6 +28,7 @@ const Projects = () => {
             ]}
             leftColumnContent={
               <>
+                <p><a href="https://aim-revival.alissa.dev/" target="_blank">View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
                 <p>
                   This ongoing project recreates the look and feel of AOL Instant Messenger for the web.
                   It includes a draggable Login window and Buddy List, a taskbar button
@@ -43,18 +44,17 @@ const Projects = () => {
                 </p>
 
                 <p className="mt-2">
-                  I use <strong>Cursor</strong> (AI-powered editor) to speed up development, generate snippets, and debug tricky UI behavior (dragging bounds, window focus, etc.).
-                  Firebase (Auth + Firestore) is used for sign-in, presence, and message history.
+                  I use <strong>Cursor</strong> (AI-powered editor) to speed up development, generate snippets, and debug tricky UI behavior (dragging bounds, window focus, etc.). Firebase (Auth + Firestore) is used for sign-in, presence, and message history. <a href="https://botoxparty.github.io/XP.css/" className="body-link" target="_blank">XP.css</a> is used for the classic Windows XP styling.
                 </p>
 
                 <h5 className="font-normal mb-1 mt-4">Core highlights:</h5>
                 <div className="space-y-1 mt-2 text-sm leading-6">
                   <ul className="list-disc list-outside ml-4 space-y-1">
-                    <li>Draggable windows with bounds-clamping to keep them on screen</li>
-                    <li>Buddy List → double-click opens chats in separate pop-out windows</li>
-                    <li>Window focus/stacking states (active window gets topmost z-index)</li>
-                    <li>Nostalgic UI details</li>
-                    <li>Planned: Classic AIM sounds, emoticons, buddy icons and profiles</li>
+                    <li className="mb-0">Draggable windows with bounds-clamping to keep them on screen</li>
+                    <li className="mb-0">Buddy List → double-click opens chats in separate pop-out windows</li>
+                    <li className="mb-0">Window focus/stacking states (active window gets topmost z-index)</li>
+                    <li className="mb-0">Nostalgic UI details</li>
+                    <li className="mb-0">Planned: Classic AIM sounds, emoticons, buddy icons and profiles</li>
                   </ul>
                 </div>
 
@@ -79,17 +79,17 @@ const Projects = () => {
             }
           >
             <div className="text-center">
-              <img src="/images/projects/aim/aim-login.png" alt="AIM Revival Login Window" />
+              <img src="/images/projects/aim/aim-1.png" alt="AIM Revival Login Window" />
               <p className="caption">
-                Login Window (draggable, XP-style chrome)
+                AIM Revival login screen - modern code meets retro XP design.
                 <span>
-                  <a href="https://aim.alissa.dev" target="_blank" rel="noreferrer">
+                  <a href="https://aim-revival.alissa.dev" target="_blank" rel="noreferrer">
                     View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" />
                   </a>
                 </span>
               </p>
             </div>
-          </ProjectCard> */}
+          </ProjectCard>
 
           <ProjectCard
             note="Work-in-Progress"
@@ -112,7 +112,7 @@ const Projects = () => {
 
                 <p><a href="https://weather.alissa.dev/" target="_blank">View live demo <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
                 <p>
-                  A clean, responsive weather app built with Next.js and Tailwind 4. Users can search by city or ZIP with Google Places Autocomplete, or simply allow geolocation to fetch local conditions instantly. The app displays current conditions, hourly and 7-day forecasts, dew point, UV index, humidity, pressure, wind, and sunrise/sunset. Also included are a F°/C° toggle, beautiful weather condition images (created by <a href="https://stock.adobe.com/contributor/205324907/4zevar" target="_blank" rel="noreferrer">4zevar</a>), and a full moon-phase system that maps OpenWeather's numeric phase to readable labels and SVGs.
+                  A clean, responsive weather app built with Next.js and Tailwind 4. Users can search by city or ZIP with Google Places Autocomplete, or simply allow geolocation to fetch local conditions instantly. The app displays current conditions, hourly and 7-day forecasts, dew point, UV index, humidity, pressure, wind, and sunrise/sunset. Also included are a F°/C° toggle, beautiful weather condition images (created by <a href="https://stock.adobe.com/contributor/205324907/4zevar" target="_blank" rel="noreferrer" className="body-link">4zevar</a>), and a full moon-phase system that maps OpenWeather's numeric phase to readable labels and SVGs.
                 </p>
 
                 <p className="mt-2">
@@ -122,13 +122,13 @@ const Projects = () => {
                 <h5 className="font-normal mb-1 mt-4">Highlights:</h5>
                 <div className="space-y-1 mt-2 text-sm leading-6">
                   <ul className="list-disc list-outside ml-4 space-y-1">
-                    <li>Geolocation detection for instant local weather</li>
-                    <li>Search with Google Places Autocomplete (city or ZIP)</li>
-                    <li>OpenWeather One Call: current, hourly, 7-day</li>
-                    <li>Unit toggle between Celsius and Fahrenheit</li>
-                    <li>Moon phase mapping → readable labels and custom SVG icons</li>
-                    <li>Time-of-day gradient system via hourly CSS classes</li>
-                    <li>Mobile-first UX</li>
+                    <li className="mb-0">Geolocation detection for instant local weather</li>
+                    <li className="mb-0">Search with Google Places Autocomplete (city or ZIP)</li>
+                    <li className="mb-0">OpenWeather One Call: current, hourly, 7-day</li>
+                    <li className="mb-0">Unit toggle between Celsius and Fahrenheit</li>
+                    <li className="mb-0">Moon phase mapping → readable labels and custom SVG icons</li>
+                    <li className="mb-0">Time-of-day gradient system via hourly CSS classes</li>
+                    <li className="mb-0">Mobile-first UX</li>
                   </ul>
                 </div>
 
