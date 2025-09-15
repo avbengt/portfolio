@@ -326,6 +326,7 @@ body.is-preload #sidebar nav ul li {
     #sidebar nav {
         line-height: inherit;
         height: 35px;
+        width: 100vw;
     }
 
     #sidebar nav ul {
@@ -334,13 +335,15 @@ body.is-preload #sidebar nav ul li {
         display: flex;
         height: inherit;
         line-height: inherit;
+        justify-content: center;
         margin: 0;
+        justify-content: space-evenly;
     }
 
     #sidebar nav ul li {
         display: block;
         line-height: inherit;
-        margin: 0 0 0 1.5rem;
+        margin: 0;
         padding: 0;
     }
 
