@@ -294,12 +294,12 @@ body.is-preload #sidebar nav ul li {
 @media screen and (max-width: 1280px) {
     #sidebar {
         height: 80px;
+        width: 100%;
         left: 0;
         line-height: 3.5rem;
         padding: 0;
         text-align: center;
         top: 0;
-        width: 100%;
         position: sticky;
     }
 
@@ -308,7 +308,9 @@ body.is-preload #sidebar nav ul li {
         margin: .5rem 0 0rem;
         line-height: 1.5;
         font-size: 20px !important;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 
     #sidebar>.inner {
@@ -321,12 +323,15 @@ body.is-preload #sidebar nav ul li {
         line-height: inherit;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     #sidebar nav {
         line-height: inherit;
-        height: 35px;
         width: 100vw;
+        display: flex;
+        justify-content: center;
+        padding: 0 1rem;
     }
 
     #sidebar nav ul {
@@ -335,9 +340,11 @@ body.is-preload #sidebar nav ul li {
         display: flex;
         height: inherit;
         line-height: inherit;
-        justify-content: center;
         margin: 0;
-        justify-content: space-evenly;
+        justify-content: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     #sidebar nav ul li {
@@ -345,6 +352,7 @@ body.is-preload #sidebar nav ul li {
         line-height: inherit;
         margin: 0;
         padding: 0;
+        flex-shrink: 0;
     }
 
     #sidebar nav ul li:first-of-type {
@@ -356,9 +364,16 @@ body.is-preload #sidebar nav ul li {
 
     #sidebar nav a {
         height: inherit;
-        line-height: 4;
-        padding: 0;
+        line-height: 3;
+        padding: 0 0.75rem;
         font-size: 0.6rem;
+        white-space: nowrap;
+    }
+
+    #sidebar nav a:before,
+    #sidebar nav a:after {
+        width: calc(100% - 1.5rem);
+        left: 0.75rem;
     }
 
 }
@@ -366,6 +381,57 @@ body.is-preload #sidebar nav ul li {
 @media screen and (max-width: 736px) {
     #sidebar {
         height: 80px;
+    }
+
+    #sidebar>.inner {
+        justify-content: space-between;
+    }
+
+    #sidebar nav {
+        padding: 0 0.5rem;
+        height: auto;
+    }
+
+    #sidebar nav ul {
+        gap: 0.5rem;
+    }
+
+    #sidebar nav a {
+        padding: 0 0.5rem;
+        font-size: 0.55rem;
+        line-height: 3;
+    }
+
+    #sidebar nav a:before,
+    #sidebar nav a:after {
+        width: calc(100% - 1rem);
+        left: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #sidebar {
+        height: 80px;
+    }
+
+    #sidebar nav {
+        padding: 0 0.25rem;
+    }
+
+    #sidebar nav ul {
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+
+    #sidebar nav a {
+        padding: 0 0.4rem;
+        font-size: 0.5rem;
+    }
+
+    #sidebar nav a:before,
+    #sidebar nav a:after {
+        width: calc(100% - 0.8rem);
+        left: 0.4rem;
     }
 }
 
