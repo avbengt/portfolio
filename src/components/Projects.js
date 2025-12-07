@@ -10,13 +10,42 @@ import { useRef, useState, useEffect } from "react";
 const Projects = () => {
   const ref = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-  const isInView = useInView(ref, { once: true, margin: "-100px", amount: 0.2 });
+  // More lenient margin for mobile, less strict amount threshold
+  const isInView = useInView(ref, { once: true, margin: "-50px", amount: 0.1 });
 
   useEffect(() => {
     if (isInView && !hasAnimated) {
       setHasAnimated(true);
     }
   }, [isInView, hasAnimated]);
+
+  // Fallback: if section is already visible on mount (mobile), animate it
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const checkInitialVisibility = () => {
+      if (ref.current && !hasAnimated) {
+        const rect = ref.current.getBoundingClientRect();
+        // Check if section is in viewport (more lenient check)
+        const isVisible = rect.top < window.innerHeight + 200 && rect.bottom > -200;
+        if (isVisible) {
+          setHasAnimated(true);
+        }
+      }
+    };
+
+    // Check immediately and after delays to catch different scenarios
+    checkInitialVisibility();
+    const timeout1 = setTimeout(checkInitialVisibility, 100);
+    const timeout2 = setTimeout(checkInitialVisibility, 500);
+    const timeout3 = setTimeout(checkInitialVisibility, 1000);
+
+    return () => {
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+      clearTimeout(timeout3);
+    };
+  }, [hasAnimated]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,6 +74,7 @@ const Projects = () => {
           variants={containerVariants}
           initial="hidden"
           animate={hasAnimated ? "visible" : "hidden"}
+          style={{ minHeight: "200px" }} // Ensure space is reserved even if hidden
         >
           <ProjectCard
             note="Work-in-Progress"
