@@ -140,6 +140,7 @@ export default function Home() {
 						<motion.img
 							src="../../images/headshot.jpg"
 							className="rounded-full brightness-125 grayscale max-w-[200px] lg:max-w-full"
+							alt="Alissa Bengtson"
 						/>
 					</motion.div>
 

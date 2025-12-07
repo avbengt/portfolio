@@ -1,9 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function ScrollHandler() {
   const [isScrolling, setIsScrolling] = useState(false);
   const [activeLink, setActiveLink] = useState("intro"); // Default active section
+  const cleanupRef = useRef(null);
+  const isScrollingRef = useRef(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -18,7 +20,8 @@ export default function ScrollHandler() {
 
       // Function to update active link based on scroll position
       const updateActiveLink = () => {
-        if (isScrolling) return; // Prevent overriding during smooth scrolling
+        // Use ref to access latest isScrolling value
+        if (isScrollingRef.current) return; // Prevent overriding during smooth scrolling
 
         let activeSectionIndex = -1;
         const viewportMiddle = window.innerHeight / 2;
@@ -74,6 +77,7 @@ export default function ScrollHandler() {
         if (!targetElement) return;
 
         setIsScrolling(true); // Lock active state
+        isScrollingRef.current = true; // Update ref
         setActiveLink(targetId); // Set clicked link as active
 
         window.scrollTo({
@@ -84,6 +88,7 @@ export default function ScrollHandler() {
         // Unlock after scrolling is done
         setTimeout(() => {
           setIsScrolling(false);
+          isScrollingRef.current = false; // Update ref
         }, 800);
       };
 
@@ -100,7 +105,7 @@ export default function ScrollHandler() {
         updateActiveLink();
       }, 100);
 
-      // Cleanup listeners on unmount
+      // Return cleanup function
       return () => {
         links.forEach(link => {
           link.removeEventListener("click", handleClick);
@@ -110,11 +115,24 @@ export default function ScrollHandler() {
     };
 
     // Initialize with a small delay to ensure DOM is ready
-    const timeoutId = setTimeout(initializeScrollHandler, 100);
+    const timeoutId = setTimeout(() => {
+      cleanupRef.current = initializeScrollHandler();
+    }, 100);
 
+    // Cleanup function for the effect
     return () => {
       clearTimeout(timeoutId);
+      // Execute the cleanup from initializeScrollHandler if it exists
+      if (cleanupRef.current) {
+        cleanupRef.current();
+        cleanupRef.current = null;
+      }
     };
+  }, []); // Empty dependency array - only run once on mount
+
+  // Update ref when isScrolling changes
+  useEffect(() => {
+    isScrollingRef.current = isScrolling;
   }, [isScrolling]);
 
   useEffect(() => {
