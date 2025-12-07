@@ -34,6 +34,12 @@ body {
     background: #1b1b1b;
     color: rgba(255, 255, 255, 0.7);
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+/* Smooth scrolling enhancements */
+* {
+    scroll-behavior: smooth;
 }
 
 
@@ -162,18 +168,10 @@ body.is-ie #sidebar>.inner {
 }
 
 #sidebar nav>ul>li {
-    -moz-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    -moz-transition: opacity 0.15s ease, -moz-transform 0.75s ease;
-    -webkit-transition: opacity 0.15s ease, -webkit-transform 0.75s ease;
-    -ms-transition: opacity 0.15s ease, -ms-transform 0.75s ease;
-    transition: opacity 0.15s ease, transform 0.75s ease;
     margin: 1.5rem 0 0 0;
-    opacity: 1;
     padding: 0;
     position: relative;
+    /* Removed CSS transitions - using Framer Motion instead */
 }
 
 
@@ -182,47 +180,7 @@ body.is-ie #sidebar>.inner {
     margin: 0;
 }
 
-#sidebar nav>ul>li:nth-child(1) {
-    -moz-transition-delay: 0.45s;
-    -webkit-transition-delay: 0.45s;
-    -ms-transition-delay: 0.45s;
-    transition-delay: 0.45s;
-}
-
-#sidebar nav>ul>li:nth-child(2) {
-    -moz-transition-delay: 0.65s;
-    -webkit-transition-delay: 0.65s;
-    -ms-transition-delay: 0.65s;
-    transition-delay: 0.65s;
-}
-
-#sidebar nav>ul>li:nth-child(3) {
-    -moz-transition-delay: 0.85s;
-    -webkit-transition-delay: 0.85s;
-    -ms-transition-delay: 0.85s;
-    transition-delay: 0.85s;
-}
-
-#sidebar nav>ul>li:nth-child(4) {
-    -moz-transition-delay: 1.05s;
-    -webkit-transition-delay: 1.05s;
-    -ms-transition-delay: 1.05s;
-    transition-delay: 1.05s;
-}
-
-#sidebar nav>ul>li:nth-child(5) {
-    -moz-transition-delay: 1.25s;
-    -webkit-transition-delay: 1.25s;
-    -ms-transition-delay: 1.25s;
-    transition-delay: 1.25s;
-}
-
-#sidebar nav>ul>li:nth-child(6) {
-    -moz-transition-delay: 1.45s;
-    -webkit-transition-delay: 1.45s;
-    -ms-transition-delay: 1.45s;
-    transition-delay: 1.45s;
-}
+/* Removed CSS transition delays - using Framer Motion stagger instead */
 
 
 
@@ -283,11 +241,7 @@ body.is-preload #sidebar>.inner {
 }
 
 body.is-preload #sidebar nav ul li {
-    -moz-transform: translateY(2rem);
-    -webkit-transform: translateY(2rem);
-    -ms-transform: translateY(2rem);
-    transform: translateY(2rem);
-    opacity: 0;
+    /* Removed CSS transform/opacity - using Framer Motion instead */
 }
 
 
@@ -439,7 +393,8 @@ body.is-preload #sidebar nav ul li {
 /* Buttons */
 
 .button {
-    @apply inline-block px-6 py-3 rounded-full text-white uppercase tracking-widest font-bold text-sm transition duration-200;
+    @apply inline-block px-6 py-3 rounded-full text-white uppercase tracking-widest font-bold text-sm;
+    transition: background-color 0.2s ease-in-out;
 }
 
 /* Button */
@@ -453,11 +408,6 @@ button,
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    -moz-transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -ms-transition: background-color 0.2s ease;
-    transition: background-color 0.2s ease;
-    background-color: #18696c;
     border-radius: 3rem;
     color: #ffffff;
     cursor: pointer;
@@ -473,6 +423,7 @@ button,
     text-decoration: none;
     text-transform: uppercase;
     white-space: nowrap;
+    transition: background-color 0.2s ease-in-out;
 }
 
 input[type="submit"]:hover,
@@ -480,7 +431,7 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-    background-color: #1b1b1b;
+    /* Background color change removed - using circle expand effect instead */
 }
 
 /* Wrapper */
@@ -523,14 +474,17 @@ button:hover,
 }
 
 .wrapper.teal {
+    background: linear-gradient(135deg, #42a2a6 0%, #3d8d91 100%);
     background-color: #42a2a6;
 }
 
 .wrapper.purple {
+    background: linear-gradient(135deg, #5052b5 0%, #3e4094 100%);
     background-color: #5052b5;
 }
 
 .wrapper.purple-alt {
+    background: linear-gradient(135deg, #333584 0%, #2d2f6b 100%);
     background-color: #3e4094;
 }
 
@@ -601,6 +555,31 @@ body.is-preload .wrapper.fade-up>.inner {
     -webkit-transform: translateY(1rem);
     -ms-transform: translateY(1rem);
     transform: translateY(1rem);
+}
+
+/* Prevent Framer Motion flicker */
+[data-framer-motion] {
+    will-change: transform, opacity;
+}
+
+/* Ensure smooth animation without conflicts */
+.motion-safe\:animate-none {
+    animation: none !important;
+}
+
+/* Prevent flash of unstyled content during hydration */
+#wrapper section[id="intro"] .inner {
+    opacity: 1;
+}
+
+/* Ensure animations don't conflict with CSS transitions */
+.motion-div {
+    transition: none !important;
+}
+
+/* Prevent re-animation on re-render */
+body:not(.is-preload) [data-animate-once] {
+    animation-play-state: paused;
 }
 
 .wrapper.fade-down>.inner {
@@ -980,4 +959,46 @@ body.is-preload .wrapper.fade>.inner {
 
 .icon-social {
     @apply text-white hover:opacity-60 transition ease-in-out duration-200;
+}
+
+/* Modern enhancements */
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.wrapper>.inner {
+    position: relative;
+    z-index: 1;
+}
+
+/* Glass morphism effect for cards */
+.bg-white\/5 {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Enhanced button styles */
+.button {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* Improved image hover effects */
+#projects img {
+    transition: filter 0.3s ease;
 }

@@ -1,14 +1,51 @@
+"use client";
 import ProjectCard from "./ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 
 const Projects = () => {
+  const ref = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const isInView = useInView(ref, { once: true, margin: "-100px", amount: 0.2 });
+
+  useEffect(() => {
+    if (isInView && !hasAnimated) {
+      setHasAnimated(true);
+    }
+  }, [isInView, hasAnimated]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2
+      }
+    }
+  };
+
   return (
-    <section id="projects" className="h-full wrapper purple">
+    <section id="projects" className="h-full wrapper purple" ref={ref}>
       <div className="inner">
-        <h2 className="font-fjord">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.h2
+          className="font-fjord"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+        >
+          Projects
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate={hasAnimated ? "visible" : "hidden"}
+        >
           <ProjectCard
             note="Work-in-Progress"
             title="AOL Instant Messenger Revival"
@@ -260,7 +297,7 @@ const Projects = () => {
             </div>
           </ProjectCard>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );
