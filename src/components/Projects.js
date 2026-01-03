@@ -272,7 +272,7 @@ const Projects = () => {
             leftColumnContent={(
               <>
                 <p>After a major corporate rebranding, I was tasked with building out various pages of the Alludo company website, including the homepage, which features a series of animations as you scroll down the page. These animations were built with CSS keyframes. The images and color gradient in the hero also change depending on the time of day you view the site.</p>
-                <p><a href="https://www.alludo.com/" target="_blank">View live site <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
+                <p><a href="https://web.archive.org/web/20250222033511/https://www.alludo.com/en/" target="_blank">View archived site <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="icon w-3 h-3" /></a></p>
 
                 <h5 className="font-normal mb-1">Skills and tools used:</h5>
                 <div className="flex flex-wrap mt-2">
