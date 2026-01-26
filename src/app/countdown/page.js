@@ -96,7 +96,7 @@ export default function CountdownPage() {
           className="font-fjord text-5xl md:text-6xl lg:text-7xl text-white mb-4"
           variants={itemVariants}
         >
-          Countdown to February 14, 2026
+          Countdown to February 13, 2026
         </motion.h1>
 
         <motion.div
