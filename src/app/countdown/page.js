@@ -12,7 +12,7 @@ export default function CountdownPage() {
   });
   const [mounted, setMounted] = useState(false);
 
-  const targetDate = new Date("2026-02-14T00:00:00").getTime();
+  const targetDate = new Date("2026-02-13T00:00:00").getTime();
 
   useEffect(() => {
     setMounted(true);
