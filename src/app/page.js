@@ -75,7 +75,7 @@ export default function Home() {
 	// Prevent hydration mismatch by showing static content first
 	if (!mounted) {
 		return (
-			<div id="wrapper">
+			<div id="wrapper" style={{ opacity: 0 }}>
 				<section id="intro" className="wrapper teal fullscreen relative overflow-hidden">
 					<div className="inner flex flex-col lg:flex-row items-center gap-6 relative z-10">
 						<div className="headshot lg:order-2 w-full lg:w-1/3 flex items-center justify-center">
