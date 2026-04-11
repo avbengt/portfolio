@@ -1,67 +1,36 @@
-import "@/styles/globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ScrollHandler from "@/components/ScrollHandler";
-import Script from "next/script";
-import "flowbite";
+import { Fraunces, Outfit } from 'next/font/google'
+import "@/styles/globals.css"
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  weight: ['300', '700', '900'],
+  style: ['normal', 'italic'],
+  variable: '--font-fraunces',
+  display: 'swap',
+})
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-outfit',
+  display: 'swap',
+})
 
 export const metadata = {
-  title: "Alissa Bengtson",
-  description: "Alissa Bengtson is a front-end web developer who builds modern, accessible, and engaging digital experiences for the web.",
-};
+  title: 'Alissa | Front-end Developer',
+  description: "I've been building things for the web since dial-up was considered fast. 13+ years of professional front-end experience.",
+  openGraph: {
+    title: 'Alissa | Front-end Developer',
+    description: "Front-end developer. Building for the web since 1999.",
+    url: 'https://alissa.dev',
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
+  },
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        {/* Metadata */}
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content="/og-image.png" />
-        <meta property="og:url" content="https://alissa.dev" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content="/og-image.png" />
-        <meta name="twitter:url" content="https://alissa.dev" />
-
-        {/* Fonts */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fjord+One&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
-        {/* Navbar */}
-        <Navbar />
-
-        {/* Scroll Handler */}
-        <ScrollHandler />
-
-        {/* Main Content */}
-        <main>
-          {children}
-        </main>
-
-        {/* Footer */}
-        <Footer />
-
-        {/* External Scripts */}
-        <Script src="https://code.jquery.com/jquery-3.6.4.min.js" strategy="beforeInteractive" />
-        <Script src="/js/breakpoints.min.js" strategy="beforeInteractive" />
-        <Script src="/js/browser.min.js" strategy="beforeInteractive" />
-        <Script src="/js/util.js" strategy="beforeInteractive" />
-        <Script src="/js/jquery.scrolly.min.js" strategy="afterInteractive" />
-        <Script src="/js/flowbite.min.js" strategy="afterInteractive" />
-
-        {/* Feather Icons */}
-        <Script id="feather-icons" strategy="afterInteractive">
-          {`if (window.feather) { feather.replace(); }`}
-        </Script>
-      </body>
+    <html lang="en" className={`${fraunces.variable} ${outfit.variable}`}>
+      <body>{children}</body>
     </html>
-  );
+  )
 }

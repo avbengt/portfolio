@@ -1,64 +1,90 @@
-"use client";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
+"use client"
+
+const linkStyle = {
+  color: "var(--muted)",
+  textDecoration: "underline",
+  textUnderlineOffset: 3,
+  transition: "color 0.25s",
+}
+
+function FooterLink({ href, children }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={linkStyle}
+      onMouseEnter={(e) => (e.currentTarget.style.color = "var(--ink)")}
+      onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted)")}
+    >
+      {children}
+    </a>
+  )
+}
 
 export default function Footer() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
+  const currentYear = new Date().getFullYear();
   return (
-    <footer className="wrapper purple-alt xl:ml-[25em]" ref={ref}>
-      <div className="inner text-sm text-center">
-        <motion.p
-          className="!mb-0"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
+    <footer
+      style={{
+        borderTop: "1px solid var(--border)",
+        padding: "28px 0",
+      }}
+    >
+      <div
+        className="content-container"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: 10,
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "var(--font-outfit)",
+            fontSize: 14,
+            color: "var(--muted)",
+            margin: 0,
+          }}
         >
-          This site was built by me using{" "}
-          <motion.a
-            href="https://code.visualstudio.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            whileHover={{ scale: 1.05 }}
-            className="underline decoration-2 underline-offset-2"
+          © {currentYear}{" "}
+          <span
+            style={{
+              fontFamily: "var(--font-fraunces)",
+              fontStyle: "italic",
+              fontWeight: 700,
+              color: "var(--ink)",
+            }}
           >
-            Visual Studio Code
-          </motion.a>
-          ,{" "}
-          <motion.a
-            href="https://nextjs.org/"
-            target="_blank"
-            rel="noreferrer noopener"
-            whileHover={{ scale: 1.05 }}
-            className="underline decoration-2 underline-offset-2"
+            alissa
+          </span>
+          <span
+            style={{
+              fontFamily: "var(--font-fraunces)",
+              fontStyle: "italic",
+              fontWeight: 700,
+              color: "var(--seafoam)",
+            }}
           >
-            Next.js
-          </motion.a>{" "}
-          and{" "}
-          <motion.a
-            href="https://tailwindcss.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            whileHover={{ scale: 1.05 }}
-            className="underline decoration-2 underline-offset-2"
-          >
-            Tailwind CSS
-          </motion.a>
-          , and deployed with{" "}
-          <motion.a
-            href="https://vercel.com/"
-            target="_blank"
-            rel="noreferrer noopener"
-            whileHover={{ scale: 1.05 }}
-            className="underline decoration-2 underline-offset-2"
-          >
-            Vercel
-          </motion.a>
-          .
-        </motion.p>
+            .dev
+          </span>{" "}
+          — crafted with <FooterLink href="https://nextjs.org">Next.js</FooterLink>,{" "}
+          <FooterLink href="https://cursor.com">Cursor</FooterLink>{" "}
+          &amp; maybe a little too much coffee.
+        </p>
+        <p
+          style={{
+            fontFamily: "var(--font-outfit)",
+            fontSize: 14,
+            color: "var(--muted)",
+            margin: 0,
+          }}
+        >
+          Deployed on <FooterLink href="https://vercel.com">Vercel</FooterLink>
+        </p>
       </div>
     </footer>
-  );
+  )
 }
