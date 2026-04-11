@@ -17,13 +17,13 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  title: 'Alissa | Front-end Developer',
+  title: 'Alissa Bengtson | Front-end Developer',
   description: "I've been building things for the web since dial-up was considered fast. 13+ years of professional front-end experience.",
   openGraph: {
-    title: 'Alissa | Front-end Developer',
+    title: 'Alissa Bengtson | Front-end Developer',
     description: "Front-end developer. Building for the web since 1999.",
     url: 'https://alissa.dev',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
   },
 }
 
