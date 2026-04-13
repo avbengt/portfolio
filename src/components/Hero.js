@@ -281,33 +281,33 @@ export default function Hero() {
         }
 
         /* Blob 1 — fuchsia, top left */
-        .hero-blob-1 { width: 45%; padding-bottom: 45%; top: -20%; left: -15%; opacity: 0.23; }
+        .hero-blob-1 { width: 58%; padding-bottom: 58%; top: -15%; left: -8%; opacity: 0.24; }
         .hero-blob-1::after { background: var(--fuchsia); }
 
         /* Blob 2 — violet, bottom right */
-        .hero-blob-2 { width: 40%; padding-bottom: 40%; bottom: -20%; right: -10%; opacity: 0.25; }
+        .hero-blob-2 { width: 54%; padding-bottom: 54%; bottom: -15%; right: -4%; opacity: 0.26; }
         .hero-blob-2::after { background: var(--violet); }
 
         /* Blob 3 — gold, center */
-        .hero-blob-3 { width: 30%; padding-bottom: 30%; top: 10%; left: 30%; opacity: 0.15; }
+        .hero-blob-3 { width: 42%; padding-bottom: 42%; top: 8%; left: 28%; opacity: 0.14; }
         .hero-blob-3::after { background: var(--gold); }
 
         /* Blob 4 — seafoam, top right */
-        .hero-blob-4 { width: 35%; padding-bottom: 35%; top: -10%; right: -5%; opacity: 0.16; }
+        .hero-blob-4 { width: 48%; padding-bottom: 48%; top: -8%; right: 0%; opacity: 0.15; }
         .hero-blob-4::after { background: var(--seafoam); }
 
         /* Blob 5 — fuchsia, bottom left */
-        .hero-blob-5 { width: 28%; padding-bottom: 28%; bottom: 0%; left: 10%; opacity: 0.18; }
+        .hero-blob-5 { width: 40%; padding-bottom: 40%; bottom: 0%; left: 8%; opacity: 0.17; }
         .hero-blob-5::after { background: var(--fuchsia); }
 
         @media (max-width: 768px) {
           .hero-content { padding-top: 0 !important; }
           .hero-stats { padding-bottom: 0 !important; }
-          .hero-blob-1 { opacity: 0.48; }
-          .hero-blob-2 { opacity: 0.50; }
-          .hero-blob-3 { opacity: 0.32; }
-          .hero-blob-4 { opacity: 0.34; }
-          .hero-blob-5 { opacity: 0.3y8; }
+          .hero-blob-1 { opacity: 0.40; }
+          .hero-blob-2 { opacity: 0.42; }
+          .hero-blob-3 { opacity: 0.26; }
+          .hero-blob-4 { opacity: 0.28; }
+          .hero-blob-5 { opacity: 0.30; }
         }
 
       `}</style>
