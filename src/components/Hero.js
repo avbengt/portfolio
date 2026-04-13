@@ -102,7 +102,7 @@ export default function Hero() {
               fontFamily: "var(--font-outfit)",
               fontSize: "clamp(18px, 3vw, 20px)",
               color: "var(--muted)",
-              maxWidth: 520,
+              maxWidth: 600,
               margin: "0 auto 28px",
             }}
           >
