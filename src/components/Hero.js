@@ -22,10 +22,7 @@ export default function Hero() {
         position: "relative",
       }}
     >
-      {/* Base glow — fills center in dark mode so no dark gap between blobs */}
       <div className="hero-base-glow" />
-
-      {/* Aurora blobs — dark mode only */}
       <div className="hero-blob hero-blob-1" />
       <div className="hero-blob hero-blob-2" />
       <div className="hero-blob hero-blob-3" />
