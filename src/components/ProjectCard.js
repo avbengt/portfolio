@@ -243,11 +243,81 @@ function ArrowButton({ direction, onClick, disabled }) {
   )
 }
 
+function WeatherPhonesPanel({ phoneScreenshots }) {
+  return (
+    <div style={{
+      background: "var(--surface2)",
+      padding: "32px 28px 40px",
+      borderBottom: "1px solid var(--border)",
+      display: "flex",
+      alignItems: "flex-end",
+      justifyContent: "center",
+      gap: 14,
+    }}>
+      {phoneScreenshots.map(({ src, city }) => (
+        <div key={city} style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 8,
+        }}>
+          <div style={{
+            background: "#0e0e14",
+            borderRadius: 22,
+            padding: "12px 8px",
+            boxShadow: "0 12px 40px rgba(0,0,0,0.4)",
+            width: 140,
+            flexShrink: 0,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}>
+            <div style={{
+              width: 30,
+              height: 3,
+              background: "rgba(255,255,255,0.1)",
+              borderRadius: 2,
+              marginBottom: 9,
+            }} />
+            <img src={src} alt={city} style={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 5,
+              display: "block",
+            }} />
+            <div style={{
+              width: 30,
+              height: 3,
+              background: "rgba(255,255,255,0.1)",
+              borderRadius: 2,
+              marginTop: 9,
+            }} />
+          </div>
+          <span style={{
+            fontFamily: "var(--font-outfit)",
+            fontWeight: 600,
+            fontSize: 9,
+            letterSpacing: "0.07em",
+            textTransform: "uppercase",
+            color: "var(--muted2)",
+          }}>
+            {city}
+          </span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function ScreenshotPanel({ project }) {
   const [activeIdx, setActiveIdx] = useState(0)
   const { screenshotType, screenshots, desktopScreenshot, mobileScreenshot, url } = project
   const showControls = (screenshotType === "desktop" || screenshotType === "mobile")
     && screenshots && screenshots.length > 1
+
+  if (screenshotType === "weatherPhones" && project.phoneScreenshots) {
+    return <WeatherPhonesPanel phoneScreenshots={project.phoneScreenshots} />
+  }
 
   return (
     <div style={{

@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import { motion } from "framer-motion"
 import { ArrowRight } from "./Icons"
 
@@ -189,8 +190,8 @@ export default function Hero() {
         className="hero-stats"
       >
         {STATS.map((s, i) => (
-          <>
-            <div key={s.label} style={{ textAlign: "center" }}>
+          <React.Fragment key={s.label}>
+            <div style={{ textAlign: "center" }}>
               <span style={{
                 fontFamily: "var(--font-fraunces)",
                 fontWeight: 900,
@@ -232,7 +233,7 @@ export default function Hero() {
               </span>
             </div>
             {i < STATS.length - 1 && <span className="stat-sep">✦</span>}
-          </>
+          </React.Fragment>
         ))}
       </motion.div>
 
