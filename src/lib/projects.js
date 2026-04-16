@@ -61,15 +61,15 @@ export const projects = [
     skills: ["Next.js", "React", "Tailwind CSS", "OpenWeather One Call API", "Google Places Autocomplete", "Geolocation API", "JavaScript", "Git", "Vercel"],
     details: [
       "A clean, responsive weather app built with Next.js and Tailwind 4. Users can search by city or ZIP with Google Places Autocomplete, or simply allow geolocation to fetch local conditions instantly.",
-      "The app displays current conditions, hourly and 7-day forecasts, dew point, UV index, humidity, pressure, wind, and sunrise/sunset — along with a F°/C° toggle and a full moon-phase system that maps numeric phases to readable labels and SVGs.",
-      "The UI changes by time of day with gentle gradient backgrounds, and the whole experience is tuned for both mobile and desktop.",
+      "The app displays current conditions, hourly and 7-day forecasts, dew point, UV index, humidity, pressure, wind, and sunrise/sunset - along with a F°/C° toggle and a full moon-phase system that maps numeric phases to readable labels and SVGs.",
+      "The UI dynamically adapts to both time of day and current conditions - a clear night looks different from a cloudy one, a sunny afternoon different from an overcast morning. Designed mobile-first - it looks clean on desktop too, just don't expect it to fill the whole screen.",
     ],
     highlights: [
       "Geolocation detection for instant local weather",
       "Search with Google Places Autocomplete (city or ZIP)",
       "OpenWeather One Call: current, hourly, 7-day forecasts",
       "Unit toggle between Celsius and Fahrenheit",
-      "Moon phase mapping → readable labels and custom SVG icons",
+      "Moon phase mapping - readable labels and custom SVG icons",
       "Time-of-day gradient system",
       "Mobile-first UX",
     ],
