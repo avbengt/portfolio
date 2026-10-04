@@ -166,17 +166,28 @@ export default function About() {
                   href="https://www.linkedin.com/in/alissa-bengtson/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost"
+                  className="btn-icon"
+                  aria-label="LinkedIn"
                 >
-                  <img src="/images/icon-li.svg" width={16}></img> LinkedIn
+                  <img src="/images/icon-li.svg" width={16}></img>
                 </motion.a>
                 <motion.a
                   href="https://github.com/avbengt"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-ghost"
+                  className="btn-icon"
+                  aria-label="GitHub"
                 >
-                  <img src="/images/icon-gh.svg" width={16}></img> GitHub
+                  <img src="/images/icon-gh.svg" width={16}></img>
+                </motion.a>
+                <motion.a
+                  href="https://www.upwork.com/freelancers/~01ee50de08fc0c6348"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-icon"
+                  aria-label="Upwork"
+                >
+                  <img src="/images/icon-upwork.svg" width={16}></img>
                 </motion.a>
               </div>
             </FadeUp>

@@ -167,7 +167,8 @@ img {
 }
 
 img[src="/images/icon-gh.svg"],
-img[src="/images/icon-li.svg"] {
+img[src="/images/icon-li.svg"],
+img[src="/images/icon-upwork.svg"] {
   filter: invert(1);
 }
 
@@ -209,6 +210,27 @@ img[src="/images/icon-li.svg"] {
 
 .btn-ghost:hover {
   border-color: var(--ink);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid var(--border2);
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.btn-icon:hover {
+  border-color: var(--ink);
+  background: var(--surface2);
+}
+
+.btn-icon img {
+  width: 18px;
 }
 
 .btn-gold-outline {
